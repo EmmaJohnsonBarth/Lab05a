@@ -9,10 +9,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    let result = a + b;
-    let string = `The sum of ${a} and ${b} is ${result}.`;
-    let array = [result, string];
-    return array;
+  let result = a + b;
+  let string = `The sum of ${a} and ${b} is ${result}.`;
+  let array = [result, string];
+  return array;
 }
 
 // console.log('test');
@@ -34,10 +34,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-    let result = a * b;
-    let string = `The product of ${a} and ${b} is ${result}.`;
-    let array = [result, string];
-    return array;
+  let result = a * b;
+  let string = `The product of ${a} and ${b} is ${result}.`;
+  let array = [result, string];
+  return array;
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -79,13 +79,22 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-
+function sumArray(sumArr) {
+  let sum = 0;
+  for (let i = 0; i < sumArr.length; i++) {
+    sum += sumArr[i];
+  }
+  let elementsString;
+  for (let i = 0; i < sumArr.length; i++) {
+    elementsString = sumArr.toString();
+  }
+  return [sum, `${elementsString} was passed in as an array of numbers, and ${sum} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+// console.log(sumArray(testArray));
+// console.log(testSumArray(testArray));
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -107,7 +116,7 @@ function multiplyArray(multArr) { //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
